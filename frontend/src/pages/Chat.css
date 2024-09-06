@@ -1,0 +1,33 @@
+.message-container {
+  overflow-y: scroll;
+  height: 30em;
+}
+
+.chat-input-section {
+  display: flex;
+}
+
+.message-input {
+  display: flex;
+  margin-top: 0.5em;
+  border-top: 1px solid #ccc;
+}
+  
+.message-input input {
+  flex: 1;
+  padding: 10px;
+  margin-right: 10px;
+}
+  
+.message-input .send-icon {
+  height: 1.5em;
+  width: 2em;
+  margin: auto;
+}
+
+.user-icon {
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  height: 2.5rem;
+  width: 2.5rem;
+}
