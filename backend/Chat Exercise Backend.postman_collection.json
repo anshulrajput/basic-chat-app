@@ -1,0 +1,155 @@
+{
+	"info": {
+		"_postman_id": "0251dbae-8214-42c4-838d-809bdb9a0d88",
+		"name": "Chat Exercise Backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24199364",
+		"_collection_link": "https://winter-astronaut-968719.postman.co/workspace/Anshul~04256f01-1e70-47d3-8e7c-4b347be7f29b/collection/24199364-0251dbae-8214-42c4-838d-809bdb9a0d88?action=share&source=collection_link&creator=24199364"
+	},
+	"item": [
+		{
+			"name": "Save Message",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"text\": \"test\"\n}"
+				},
+				"url": {
+					"raw": "{{host}}/messages/",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"messages",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Message List",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"name": "Content-Type",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{host}}/store",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"store"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Message By Id",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"macAddress\" : \"123456\"\n}"
+				},
+				"url": {
+					"raw": "{{host}}/messages/357f4781-7ecc-4a85-b66f-b955746cceb3",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"messages",
+						"357f4781-7ecc-4a85-b66f-b955746cceb3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Message By Id",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"text\" : \"Updated message\"\n}"
+				},
+				"url": {
+					"raw": "{{host}}/messages/5ceb2719-aea6-4be0-b1cd-b70dbefe85a4",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"messages",
+						"5ceb2719-aea6-4be0-b1cd-b70dbefe85a4"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "localhost:8000",
+			"type": "string"
+		}
+	]
+}
